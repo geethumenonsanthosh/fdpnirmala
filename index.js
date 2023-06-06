@@ -1,9 +1,11 @@
 const express =require("express");
+const cors= require('cors');
 const empModel = require('./model/model')
 const app =new express();
 //middlewares
 app.use(express.urlencoded({extended :true}))
 app.use(express.json());
+app.use(cors());
 
 // app.get(url,callback)
 app.get('/',(req,res)=>{
